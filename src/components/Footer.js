@@ -13,6 +13,7 @@ const FooterContainer = styled.div`
 const Text = styled.p`
   font-size: 1rem;
   text-align: center;
+  color: #a8b2d1;
 `;
 
 const Footer = () => {

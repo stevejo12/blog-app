@@ -22,6 +22,7 @@ const HeroContainer = styled.div`
 
 const Heading = styled.h1`
   font-size: 3.5rem;
+  color: #ccd6f6;
 
   @media screen and (max-width: 960px) {
     font-size: 2.5rem;
@@ -30,22 +31,24 @@ const Heading = styled.h1`
 const SubHeading = styled.p`
   margin-top: 20px;
   margin-bottom: 20px;
+  color: #8892b0;
 `;
+
 const GetStarted = styled(Link)`
   display: flex;
   color: #fff;
   text-decoration: none;
-  border: 2px solid #fff;
   border-radius: 5px;
   padding: 0.5rem 2rem;
   font-size: 1.2rem;
   font-weight: 600;
+  background-color: rgba(0,0,0,0);
+  color: #64ffda;
+  border: 1px solid #64ffda;
 
   &:hover {
-    background: #fff;
-    color: #000;
-    border: 2px solid #000;
-    transition: all 0.3 ease;
+    background-color: rgba(100,255,218,0.1);
+    outline: none;
   }
 `;
 

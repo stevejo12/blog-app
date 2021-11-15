@@ -14,7 +14,6 @@ const Nav = styled.nav`
   top: 0;
   position: sticky;
   background: #0a192f;
-  
 `
 
 const NavbarContainer = styled(Container)`
@@ -26,7 +25,7 @@ const NavbarContainer = styled(Container)`
 `;
 
 const NavLogo = styled(Link)`
-  color: #fff;
+  color: #64ffda;
   font-size: 1.5rem;
   font-weight: bold;
   display: flex;
@@ -41,9 +40,13 @@ const NavIcon = styled(FaBlogger)`
   margin-right: 0.5rem;
 `;
 
+const NavName = styled.p`
+  color: #ccd6f6;
+`;
+
 const MobileIcon = styled.div`
   display: none;
-  color: #fff;
+  color: #64ffda;
 
   @media screen and (max-width: 960px) {
     display: block;
@@ -76,7 +79,7 @@ const NavItem = styled.li`
 `;
 
 const NavLinks = styled(Link)`
-  color: #fff;
+  color: #ccd6f6;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -91,7 +94,7 @@ const NavLinks = styled(Link)`
     display: table;
 
     &:hover {
-      color: #4b59f7;
+      color: #64ffda;
       transition: all 0.3 ease;
     }
   }
@@ -110,7 +113,7 @@ const Navbar = () => {
         <NavbarContainer>
           <NavLogo to ="/">
             <NavIcon />
-            Jeco's Blog
+            <NavName>Jeco's Blog</NavName>
           </NavLogo>
           <MobileIcon onClick={handleClick}>
             {click ? <FaTimes /> : <FaBars />}

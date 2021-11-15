@@ -32,16 +32,19 @@ const AboutText = styled.div`
 
 const Heading = styled.h1`
   font-size: 3rem;
+  color: #ccd6f6;
 `;
 
 const Subtitle = styled.h4`
   font-size: 1.3rem;
+  color: #8892b0;
 `;
 
 const Text = styled.p`
   text-align: justify;
   margin-bottom: 20px;
   margin-top: 20px;
+  color: #8892b0;
 `;
 
 const About = () => {
