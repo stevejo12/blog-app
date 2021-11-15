@@ -1,12 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Container } from '../globalStyles';
+import { Container, Wrapper } from '../globalStyles';
 import BlogData from '../data/blog.json';
-
-export const Wrapper = styled(Container)`
-  min-height: 85vh;
-`;
 
 const CardRow = styled.div`
   display: flex;

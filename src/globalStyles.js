@@ -29,4 +29,8 @@ export const Container = styled.div`
   }
 `;
 
+export const Wrapper = styled(Container)`
+  min-height: 85vh;
+`;
+
 export default GlobalStyle;
