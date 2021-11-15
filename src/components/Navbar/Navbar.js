@@ -13,6 +13,7 @@ const Nav = styled.nav`
   font-size: 1.2rem;
   top: 0;
   position: sticky;
+  background: #0a192f;
   
 `
 
