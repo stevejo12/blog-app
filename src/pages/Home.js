@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Container } from '../../globalStyles';
+import { Container } from '../globalStyles';
 
 // 160px = 80 navbar 80 footer for a full page;
 const HeroBackground = styled.div`

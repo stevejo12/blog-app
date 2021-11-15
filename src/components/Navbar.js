@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FaBars, FaBlogger, FaTimes } from 'react-icons/fa';
 
-import { Container } from '../../globalStyles';
+import { Container } from '../globalStyles';
 
 const Nav = styled.nav`
   height: 80px;
