@@ -8,7 +8,7 @@ const HeroBackground = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height:85vh;
+  height: min(calc(100vh - 160px), 85vh);
 `;
 const HeroContainer = styled.div`
   display: flex;

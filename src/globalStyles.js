@@ -30,7 +30,7 @@ export const Container = styled.div`
 `;
 
 export const Wrapper = styled(Container)`
-  min-height: 85vh;
+  min-height: min(calc(100vh - 160px), 85vh);
 `;
 
 export default GlobalStyle;

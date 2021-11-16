@@ -7,10 +7,14 @@ const AboutRow = styled.div`
   padding: 120px 0;
   margin: 0 100px;
 
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 1050px) {
     flex-direction: column;
     margin: 0;
-    padding: 60px;
+    padding: 60px 0;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 10px 0;
   }
 `;
 
