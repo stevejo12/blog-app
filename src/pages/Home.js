@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Container } from '../globalStyles';
 
-// 160px = 80 navbar 80 footer for a full page;
 const HeroBackground = styled.div`
   background-image: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0.54) 99.99%, rgba(0,0,0, 0.99) 100%) , url('https://images.pexels.com/photos/6446685/pexels-photo-6446685.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
   background-size: cover;
