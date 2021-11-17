@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
+import emailjs, { init } from 'emailjs-com';
 import styled from 'styled-components'
 import { Wrapper } from '../globalStyles'
+import { useRef } from 'react';
 
 const HeaderRow = styled.div`
   display: flex;
@@ -94,26 +96,69 @@ const SendButton = styled.button`
 `;
 
 const Contact = () => {
+  const formRef = useRef();
+  const [firstname, setFirstname] = useState('');
+  const [lastname, setLastname] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const onSubmitMessage = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      formRef.current,
+      process.env.REACT_APP_EMAILJS_USER_ID
+    ).then((result) => {
+      console.log('result: ', result.text);
+    }, (error) => {
+      console.log("error: ", error.text);
+    })
+  }
+
   return (
     <Wrapper id="contact">
       <HeaderRow>
         <Title>Get in touch</Title>
         <Subtitle>
-          Currently I'm looking for a full time job in Frontend development. Besides that, if you just want to say hello. I'll try my best to get back to you ASAP!
+          Currently I'm looking for a full time job in Frontend development. Don't hesitate to contact me if you just want to say hello. I'll try my best to get back to you soon!
         </Subtitle>
       </HeaderRow>
       <FormRow>
         <FormContainer>
-          <form autoComplete="off">
+          <form autoComplete="off" ref={formRef}>
             <Label>First Name</Label>
-            <InputStyle type="text" id="firstname" name="firstname" />
+            <InputStyle 
+              type="text"
+              value={firstname}
+              name="firstname"
+              onChange={(e) => setFirstname(e.target.value)} 
+            />
             <Label>Last Name</Label>
-            <InputStyle type="text" id="lastname" name="lastname" />
+            <InputStyle 
+              type="text"
+              value={lastname}
+              name="lastname"
+              onChange={(e) => setLastname(e.target.value)} 
+            />
             <Label>Email</Label>
-            <InputStyle type="text" id="email" name="email" />
+            <InputStyle 
+              type="text"
+              value={email}
+              name="email"
+              onChange={(e) => setEmail(e.target.value)} 
+            />
             <Label>Leave us a message...</Label>
-            <TextareaStyle rows="5" id="message" name="message" />
-            <SendButton type="submit">Send</SendButton>
+            <TextareaStyle 
+              rows="5"
+              value={message}
+              name="message"
+              onChange={(e) => setMessage(e.target.value)}
+            />
+            <SendButton type="submit" onClick={onSubmitMessage}>
+              Send
+            </SendButton>
           </form>
         </FormContainer>
       </FormRow>

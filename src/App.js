@@ -10,6 +10,8 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import About from './pages/About';
+import LeftSocials from './components/LeftSocials';
+import RightSocials from './components/RightSocials';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
+      <LeftSocials />
+      <RightSocials />
     </Router>
   );
 }

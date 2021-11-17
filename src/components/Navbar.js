@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components';
-import { FaBars, FaBlogger, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 import CV from '../assets/CV.pdf';
 import Menu from '../data/header.json';

@@ -16,6 +16,7 @@ const ProjectTitle = styled.h1`
   padding-top: 120px;
   font-size: 2rem;
   text-align: center;
+  color : #ccd6f6;
 `;
 
 const ProjectContainer = styled.div`

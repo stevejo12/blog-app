@@ -22,6 +22,7 @@ const AboutImage = styled.img`
   @media screen and (max-width: 960px) {
     display: block;
     margin: 0 auto;
+    padding: 0 30px;
   }
 
   // check when width < 300px with padding 60px from Wrapper
