@@ -21,11 +21,16 @@ const Subtitle = styled.h4`
   margin-bottom: 50px;
   text-align: center;
   color: #8892b0;
+
+  @media screen and (max-width: 960px) {
+    padding: 0 0.5rem;
+  }
 `;
 
 const FormRow = styled.div`
   display: flex;
   align-items: center;
+  padding: 0 0.5rem;
 
   @media screen and (max-width: 960px) {
     display: flex;

@@ -25,7 +25,7 @@ const ProjectContainer = styled.div`
   padding: 3rem 0.5rem;
   cursor: pointer;
 
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 500px) {
     flex: 100%;
     max-width: 100%;
   }

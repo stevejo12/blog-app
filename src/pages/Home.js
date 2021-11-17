@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { Wrapper } from '../globalStyles';
@@ -46,7 +45,7 @@ const SubHeading = styled.p`
   }
 `;
 
-const GetStarted = styled(Link)`
+const GetStarted = styled.a`
   display: flex;
   color: #fff;
   text-decoration: none;
@@ -72,7 +71,7 @@ const Home = () => {
           <HeroContainer>
             <Heading>Welcome to my Portfolio Website</Heading>
             <SubHeading>Click Get Started to start exploring.</SubHeading>
-            <GetStarted to="#about">Get Started</GetStarted>
+            <GetStarted href="#about">Get Started</GetStarted>
           </HeroContainer>
         </HomeWrapper>
       </HeroBackground>

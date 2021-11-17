@@ -35,6 +35,10 @@ const NavLogo = styled.a`
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
+
+  @media screen and (max-width: 350px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const NavName = styled.p`
