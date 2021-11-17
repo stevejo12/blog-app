@@ -111,9 +111,17 @@ const Contact = () => {
       formRef.current,
       process.env.REACT_APP_EMAILJS_USER_ID
     ).then((result) => {
-      console.log('result: ', result.text);
+      if (result.text === 'OK') {
+        alert('Your message has been sent!');
+      }
     }, (error) => {
       console.log("error: ", error.text);
+    }).finally(() => {
+      // reset all form input
+      setEmail('');
+      setFirstname('');
+      setLastname('');
+      setMessage('');
     })
   }
 
