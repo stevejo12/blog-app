@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FaBars, FaBlogger, FaTimes } from 'react-icons/fa';
 
+import CV from '../assets/CV.pdf';
+import Menu from '../data/header.json';
 import { Container } from '../globalStyles';
 
 const Nav = styled.nav`
@@ -24,7 +25,7 @@ const NavbarContainer = styled(Container)`
   ${Container}
 `;
 
-const NavLogo = styled(Link)`
+const NavLogo = styled.a`
   color: #64ffda;
   font-size: 1.5rem;
   font-weight: bold;
@@ -36,10 +37,6 @@ const NavLogo = styled(Link)`
   cursor: pointer;
 `;
 
-const NavIcon = styled(FaBlogger)`
-  margin-right: 0.5rem;
-`;
-
 const NavName = styled.p`
   color: #ccd6f6;
 `;
@@ -49,9 +46,10 @@ const MobileIcon = styled.div`
   color: #64ffda;
 
   @media screen and (max-width: 960px) {
-    display: block;
+    display: flex;
     font-size: 1.8rem;
     cursor: pointer;
+    align-items: center;
   }
 `;
 
@@ -78,7 +76,7 @@ const NavItem = styled.li`
   height: 80px
 `;
 
-const NavLinks = styled(Link)`
+const NavLinks = styled.a`
   color: #ccd6f6;
   display: flex;
   align-items: center;
@@ -103,7 +101,12 @@ const NavLinks = styled(Link)`
 const Navbar = () => {
   const [click, setClick] = useState(false);
 
-  const handleClick = () => {
+  const handleClick = (type = 'header') => {
+    // prevent changing state when it is not a dropdown.
+    if (type === 'menu' && window.innerWidth > 960) {
+      return;
+    }
+
     setClick(!click)
   }
 
@@ -111,28 +114,24 @@ const Navbar = () => {
     <React.Fragment>
       <Nav>
         <NavbarContainer>
-          <NavLogo to ="/">
-            <NavIcon />
-            <NavName>Jeco's Blog</NavName>
+          <NavLogo href="#home">
+            <NavName>Steve Vinsensius Jo</NavName>
           </NavLogo>
           <MobileIcon onClick={handleClick}>
             {click ? <FaTimes /> : <FaBars />}
           </MobileIcon>
           <NavMenu click={click}>
+            {Menu.map((data, index) => (
+              <NavItem key={index}>
+                <NavLinks href={data.to} onClick={() => handleClick('menu')}>
+                  {data.name}
+                </NavLinks>
+              </NavItem>
+            ))}
             <NavItem>
-              <NavLinks to="/">Home</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to="/blog">My Blog</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to="/projects">My Projects</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to="/about">About</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to="/contact">Contact</NavLinks>
+              <NavLinks href={CV} onClick={() => handleClick('menu')} target="_blank" rel="noopener noreferrer">
+                Resume
+              </NavLinks>
             </NavItem>
           </NavMenu>
         </NavbarContainer>

@@ -2,10 +2,30 @@ import React from 'react';
 import styled from 'styled-components'
 import { Wrapper } from '../globalStyles'
 
+const HeaderRow = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  // padding-top: 0px;
+`;
+
+const Title = styled.h1`
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #ccd6f6;
+`;
+
+const Subtitle = styled.h4`
+  margin-bottom: 50px;
+  text-align: center;
+  color: #8892b0;
+`;
+
 const FormRow = styled.div`
   display: flex;
   align-items: center;
-  padding: 120px 0;
 
   @media screen and (max-width: 960px) {
     display: flex;
@@ -70,7 +90,13 @@ const SendButton = styled.button`
 
 const Contact = () => {
   return (
-    <Wrapper>
+    <Wrapper id="contact">
+      <HeaderRow>
+        <Title>Get in touch</Title>
+        <Subtitle>
+          Currently I'm looking for a full time job in Frontend development. Besides that, if you just want to say hello. I'll try my best to get back to you ASAP!
+        </Subtitle>
+      </HeaderRow>
       <FormRow>
         <FormContainer>
           <form autoComplete="off">

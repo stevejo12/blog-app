@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import Popup from '../components/Popup';
 import ProjectsData from '../data/projects.json';
@@ -13,18 +12,20 @@ const ProjectWrapper = styled.div`
   row-gap: 50px;
 `;
 
+const ProjectTitle = styled.h1`
+  padding-top: 120px;
+  font-size: 2rem;
+  text-align: center;
+`;
+
 const ProjectContainer = styled.div`
-  flex: 25%;
-  max-width: 25%;
-  height: 25%;
+  flex: 50%;
+  max-width: 50%;
+  height: 350px;
   padding: 3rem 0.5rem;
+  cursor: pointer;
 
   @media screen and (max-width: 960px) {
-    flex: 50%;
-    max-width: 50%;
-  }
-
-  @media screen and (max-width: 600px) {
     flex: 100%;
     max-width: 100%;
   }
@@ -32,7 +33,8 @@ const ProjectContainer = styled.div`
 
 const ProjectImage = styled.img`
   width: 100%;
-  object-fit: contain;
+  height: 100%;
+  object-fit: fill;
 `;
 
 const PopupInfoContainer = styled.div`
@@ -64,7 +66,7 @@ const Description = styled.p`
   color: #ccd6f6;
 `;
 
-const PopupLink = styled(Link)`
+const PopupLink = styled.a`
   text-decoration: none;
   color: #ccd6f6;
   display: inline-block;
@@ -103,7 +105,7 @@ const PopupMaker = ({index, closePopup = () => {}, refFn}) => {
           <PopupInfo>
             <Title>{project.title} {` (${project.year})`}</Title>
             <Description>{project.description}</Description>
-            {project.link && <PopupLink to={project.link}>
+            {project.link && <PopupLink href={project.link} target="_blank" rel="noopener noreferrer">
               Link to the website...
             </PopupLink>}
             <TagsContainer>
@@ -138,13 +140,14 @@ const Projects = () => {
   }
 
   return (
-    <Wrapper>
+    <Wrapper id="projects">
       <PopupMaker
         refFn={ref}
         style={{ display: indexProject !== null ? 'block' : 'none'}}
         index={indexProject}
         closePopup={() => handleClosePopup()}
       />
+      <ProjectTitle>My Projects</ProjectTitle>
       <ProjectWrapper> 
         {ProjectsData.map((project, index) => {
           return (

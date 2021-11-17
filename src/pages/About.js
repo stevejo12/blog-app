@@ -1,32 +1,33 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Wrapper } from '../globalStyles'
+import ProfilePicture  from '../assets/profile-picture.jpg';
 
 const AboutRow = styled.div`
   display: flex;
-  padding: 120px 0;
+  padding-top: 120px;
   margin: 0 100px;
 
   @media screen and (max-width: 1050px) {
     flex-direction: column;
     margin: 0;
-    padding: 60px 0;
-  }
-
-  @media screen and (max-width: 600px) {
-    padding: 10px 0;
+    align-items: center;
   }
 `;
 
 const AboutImage = styled.img`
-  width: 474px;
-  height: auto;
+  width: 300px;
+  height: 300px;
 
   @media screen and (max-width: 960px) {
     display: block;
     margin: 0 auto;
+  }
+
+  // check when width < 300px with padding 60px from Wrapper
+  @media screen and (max-width: 360px) {
     width: 100%;
-    height: 100%;
+    height: auto;
   }
 `;
 
@@ -34,14 +35,13 @@ const AboutText = styled.div`
   padding: 20px;
 `;
 
+const SubHeading = styled.h1`
+  font-size: 0.8rem;
+`;
+
 const Heading = styled.h1`
   font-size: 3rem;
   color: #ccd6f6;
-`;
-
-const Subtitle = styled.h4`
-  font-size: 1.3rem;
-  color: #8892b0;
 `;
 
 const Text = styled.p`
@@ -51,21 +51,46 @@ const Text = styled.p`
   color: #8892b0;
 `;
 
+const TextLink = styled.a`
+  color: #64ffda;
+  text-decoration: none;
+`;
+
+const LanguageList = styled.ul`
+  list-style-position: inside;
+`;
+
+const Language = styled.li`
+  padding-left: 10px;
+`;
+
 const About = () => {
   return (
-    <Wrapper>
+    <Wrapper id="about">
       <AboutRow>
-        <AboutImage src="https://images.pexels.com/photos/6803544/pexels-photo-6803544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
         <AboutText>
-          <Heading>Hi I'm Jane Doe</Heading>
-          <Subtitle>I am a Frontend Developer</Subtitle>
+          <SubHeading>Hi, My name is</SubHeading>
+          <Heading>Steve Vinsensius Jo</Heading>
           <Text>
-            I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click "Edit Text" or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I'm a great place for you to tell a story and let your users know a little more about you.
+            I start programming when I was in the university. When creating web pages always help improving my creativity and curiousity. Furthermore, the exploration has hooked me into coding. It started in form of HTML and CSS when I can create a page like newspaper.
           </Text>
           <Text>
-            This is a great spaceto write long text about your company and your services. You can user this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are.
+            Shifting focus to present day, I've had the privilege of working as an intern in <TextLink href="https://www.tiket.com" target="_blank" rel="noreferrer">one of the biggest online travel agency in Indonesia</TextLink>. My main focus today is to find a new opportunity as full time job in Frontend Developer / Software Developer.
           </Text>
+          <Text>
+            Here are technologies that I've been working with recently:
+          </Text>
+          <LanguageList>
+            <Language>Javascript (ES6+)</Language>
+            <Language>React JS</Language>
+            <Language>Express JS</Language>
+            <Language>Go</Language>
+          </LanguageList>
         </AboutText>
+        <AboutImage 
+          src={ProfilePicture} 
+          alt=""
+        />
       </AboutRow>
     </Wrapper>
   )

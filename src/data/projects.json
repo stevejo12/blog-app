@@ -10,38 +10,11 @@
   },
   {
     "id": 2,
-    "image":"https://res.cloudinary.com/dzixm5scw/image/upload/v1637057125/assets/igclonepic_kofzay.png",
+    "image":"https://res.cloudinary.com/dzixm5scw/image/upload/v1637131079/assets/swagger_djsewi.png",
     "title":"SPIRITS",
     "year":"2020",
     "description":"Freelance Marketplace with Integrated Project Management System (Trello)",
     "link": "",
     "tags": ["Go", "Swagger"]
-  },
-  {
-    "id": 3,
-    "image":"https://res.cloudinary.com/dzixm5scw/image/upload/v1637057125/assets/igclonepic_kofzay.png",
-    "title":"SPIRITS",
-    "year":"2020",
-    "description":"Freelance Marketplace with Integrated Project Management System (Trello)",
-    "link": "",
-    "tags": ["Go", "Golang"]
-  },
-  {
-    "id": 4,
-    "image":"https://res.cloudinary.com/dzixm5scw/image/upload/v1637057125/assets/igclonepic_kofzay.png",
-    "title":"SPIRITS",
-    "year":"2020",
-    "description":"Freelance Marketplace with Integrated Project Management System (Trello)",
-    "link": "",
-    "tags": ["Go", "Golangg"]
-  },
-  {
-    "id": 5,
-    "image":"https://res.cloudinary.com/dzixm5scw/image/upload/v1637057125/assets/igclonepic_kofzay.png",
-    "title":"SPIRITS",
-    "year":"2020",
-    "description":"Freelance Marketplace with Integrated Project Management System (Trello)",
-    "link": "",
-    "tags": ["Go", "Golanggg"]
   }
 ]

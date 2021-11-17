@@ -1,14 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Container } from '../globalStyles';
+
+import { Wrapper } from '../globalStyles';
+
+const HomeWrapper = styled(Wrapper)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+`;
 
 const HeroBackground = styled.div`
   background-image: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0.54) 99.99%, rgba(0,0,0, 0.99) 100%) , url('https://images.pexels.com/photos/6446685/pexels-photo-6446685.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: min(calc(100vh - 160px), 85vh);
+  height: calc(100vh - 80px);
 `;
 const HeroContainer = styled.div`
   display: flex;
@@ -31,6 +39,11 @@ const SubHeading = styled.p`
   margin-top: 20px;
   margin-bottom: 20px;
   color: #8892b0;
+  font-size: 1.5rem;
+
+  @media screen and (max-width: 960px) {
+    font-size: 1rem;
+  }
 `;
 
 const GetStarted = styled(Link)`
@@ -55,13 +68,13 @@ const Home = () => {
   return (
     <React.Fragment>
       <HeroBackground>
-        <Container style={{ height: '100%' }}>
+        <HomeWrapper>
           <HeroContainer>
-            <Heading>Welcome to my Blog Website</Heading>
-            <SubHeading>Click Get Started for lastest blog posts.</SubHeading>
-            <GetStarted to="/blog">Get Started</GetStarted>
+            <Heading>Welcome to my Portfolio Website</Heading>
+            <SubHeading>Click Get Started to start exploring.</SubHeading>
+            <GetStarted to="#about">Get Started</GetStarted>
           </HeroContainer>
-        </Container>
+        </HomeWrapper>
       </HeroBackground>
     </React.Fragment>
   )
