@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import emailjs, { init } from 'emailjs-com';
+import emailjs from 'emailjs-com';
 import styled from 'styled-components'
 import { Wrapper } from '../globalStyles'
 import { useRef } from 'react';
