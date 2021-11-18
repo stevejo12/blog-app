@@ -11,10 +11,11 @@ const HomeWrapper = styled(Wrapper)`
 `;
 
 const HeroBackground = styled.div`
-  background-image: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0.54) 99.99%, rgba(0,0,0, 0.99) 100%) , url('https://images.pexels.com/photos/6446685/pexels-photo-6446685.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-image: url('https://images.pexels.com/photos/6446685/pexels-photo-6446685.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  filter: brightness(75%);
   height: calc(100vh - 80px);
 `;
 const HeroContainer = styled.div`
@@ -28,7 +29,7 @@ const HeroContainer = styled.div`
 
 const Heading = styled.h1`
   font-size: 3.5rem;
-  color: #ccd6f6;
+  font-weight: bold;
 
   @media screen and (max-width: 960px) {
     font-size: 2.5rem;
@@ -37,7 +38,8 @@ const Heading = styled.h1`
 const SubHeading = styled.p`
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #8892b0;
+  color: #1f1f23;
+  font-weight: bold;
   font-size: 1.5rem;
 
   @media screen and (max-width: 960px) {
@@ -53,12 +55,11 @@ const GetStarted = styled.a`
   padding: 0.5rem 2rem;
   font-size: 1.2rem;
   font-weight: 600;
-  background-color: rgba(0,0,0,0);
-  color: #64ffda;
-  border: 1px solid #64ffda;
+  background-color: rgb(35,70,250);
+  color: rgb(248,248,248);
 
   &:hover {
-    background-color: rgba(100,255,218,0.1);
+    background-color: rgb(46,144,250);
     outline: none;
   }
 `;

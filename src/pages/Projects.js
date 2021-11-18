@@ -16,7 +16,6 @@ const ProjectTitle = styled.h1`
   padding-top: 120px;
   font-size: 2rem;
   text-align: center;
-  color : #ccd6f6;
 `;
 
 const ProjectContainer = styled.div`
@@ -43,7 +42,7 @@ const PopupInfoContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #0a192f;
+  background-color: #F2E9E4;
   margin: auto;
 `;
 
@@ -64,19 +63,19 @@ const Title = styled.h1`
 
 const Description = styled.p`
   margin: 20px 0;
-  color: #ccd6f6;
+  color: #1f1f23;
 `;
 
 const PopupLink = styled.a`
   text-decoration: none;
-  color: #ccd6f6;
+  color: rgb(35,70,250);
   display: inline-block;
   margin-bottom: 20px;
 `;
 
 const TagsContainer = styled.span`
   display: flex;
-  color: #8892b0;
+  color: #53535f;
 `;
 
 const TagContainer = styled.span`

@@ -38,22 +38,23 @@ const AboutText = styled.div`
 
 const SubHeading = styled.h1`
   font-size: 0.8rem;
+  color: #1f1f23;
 `;
 
 const Heading = styled.h1`
   font-size: 3rem;
-  color: #ccd6f6;
+  font-weight: 600;
 `;
 
 const Text = styled.p`
   text-align: justify;
   margin-bottom: 20px;
   margin-top: 20px;
-  color: #8892b0;
+  color: rgb(10,10,10);
 `;
 
 const TextLink = styled.a`
-  color: #64ffda;
+  color: rgb(35,70,250);
   text-decoration: none;
 `;
 

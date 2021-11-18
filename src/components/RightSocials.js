@@ -18,7 +18,6 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: #a8b2d1;
 
   &:after {
     content: '';
@@ -26,18 +25,19 @@ const Container = styled.div`
     width: 1px;
     height: 90px;
     margin: 0 auto;
-    background-color: #a8b2d1; 
+    background-color: #0e0e10;
   }
 `;
 
 const SocialLink = styled.a`
   text-decoration: none;
-  margin: 20px auto;
-  color #a8b2d1;
+  margin: 10px auto;
+  color inherit;
+  font-weight: 600;
   writing-mode: vertical-rl;
 
   &:hover {
-    color: #64ffda;
+    font-weight: 700;
     transform: translateY(-3px);
   }
 `

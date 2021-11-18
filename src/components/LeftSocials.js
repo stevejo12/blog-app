@@ -22,7 +22,7 @@ const Container = styled.ul`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: #a8b2d1;
+  color: #0e0e10;
   width: 40px;
   list-style: none;
 
@@ -32,13 +32,12 @@ const Container = styled.ul`
     width: 1px;
     height: 90px;
     margin: 0 auto;
-    background-color: #a8b2d1; 
+    background-color: #0e0e10;
   }
 `;
 
 const SocialContainer = styled.li`
   display:flex;
-  // margin-bottom: 20px;
 `;
 
 const SocialLink = styled.a`
@@ -47,7 +46,6 @@ const SocialLink = styled.a`
   padding: 10px;
 
   &:hover {
-    color: #64ffda;
     transform: translateY(-3px);
   }
 

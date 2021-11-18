@@ -12,7 +12,6 @@ const FooterContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 80px;
-  color: #a8b2d1;
 `;
 
 const Text = styled.p`
